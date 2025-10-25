@@ -1,13 +1,14 @@
 :root {
-  --color-primary: #2563eb; /* blue-600 */
+  --font-body: "Caveat", cursive;
+  --color-primary: #0c34e9; /* blue-600 */
   --color-primary-dark: #1e40af; /* blue-800 */
   --color-bg: #f9fafb; /* gray-50 */
-  --color-text: #1f2937; /* gray-800 */
+  --color-text: #9fb5d4; /* gray-800 */
   --color-white: #ffffff;
 }
 
 [data-theme="dark"] {
-  --color-primary: #60a5fa;
+  --color-primary: #ffffff;
   --color-bg: #111827;
   --color-text: #f3f4f6;
 }

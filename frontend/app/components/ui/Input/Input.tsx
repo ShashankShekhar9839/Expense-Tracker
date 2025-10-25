@@ -1,16 +1,16 @@
 import React from "react";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
+  placeholder: string;
 }
 
- const Input: React.FC<InputProps> = ({ label, ...props }) => {
+ const Input: React.FC<InputProps> = ({ placeholder, ...props }) => {
   return (
     <div>
-      <label className="block text-gray-700 mb-2">{label}</label>
       <input
         {...props}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[var(--color-primary)]"
+        placeholder={placeholder}
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[var(--color-primary)]"
       />
     </div>
   );

@@ -11,8 +11,8 @@ const  Button : React.FC<ButtonProps> = ({
      className, 
      ...props
 }) => {
-    const base = 'w-full py-2 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2z';
-  
+    const base = 'w-full py-3 rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2';
+
     const variants = {
         primary : "bg-[var(--color-primary)] text-[var(--color-white)] hover:bg-[var(--color-primary-dark)] focus:ring-[var(--color-primary)]",
 
