@@ -3,13 +3,13 @@
 import { Home, PlusCircle, BarChart3, User } from "lucide-react";
 import Button from "../Button/Button";
 
-export default function BottomNav() {
+export default function BottomNav({ onClickAdd }: { onClickAdd: () => void }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-md flex justify-around items-center py-3 z-2 px-4">
       <Button variant="ghost">
         <Home className="w-8 h-8 text-blue-500" />
       </Button>
-      <Button variant="ghost">
+      <Button variant="ghost" onClick={onClickAdd}>
         <PlusCircle className="w-8 h-8 text-blue-500" />
       </Button>
       <Button variant="ghost">

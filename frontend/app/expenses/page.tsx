@@ -1,6 +1,16 @@
+"use client";
+import { useState } from "react";
 import { BottomNav } from "@/components";
+import Popup from "./components/AddExpensePopup/AddExpensePopup";
+import AddExpensePopupContent from "./components/AddExpensePopupContent/AddExpensePopupContent";
 
 export default function ExpensesPage() {
+  const [isAddExpenseOpen, setIsAddExpenseOpen] = useState(false);
+
+  const handleAddExpense = () => {
+    setIsAddExpenseOpen(true);
+  };
+
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col">
       {/* Scrollable content */}
@@ -10,7 +20,17 @@ export default function ExpensesPage() {
         </h1>
       </div>
 
-      <BottomNav />
+      {isAddExpenseOpen && (
+        <Popup
+          isOpen={isAddExpenseOpen}
+          onClose={() => setIsAddExpenseOpen(false)}
+          title="Add Expense"
+        >
+            <AddExpensePopupContent />
+        </Popup>
+      )}
+
+      <BottomNav onClickAdd={handleAddExpense} />
     </main>
   );
 }
