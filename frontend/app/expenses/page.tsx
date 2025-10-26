@@ -17,7 +17,7 @@ export default function ExpensesPage() {
 
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col">
-      <div className="flex-1 overflow-y-auto p-6 pb-20 text-white">
+      <div className="flex-1 overflow-y-auto p-6 pb-20">
         <h1 className="text-2xl font-bold text-blue-600 mb-4">
           Expense Tracker
         </h1>
@@ -31,22 +31,10 @@ export default function ExpensesPage() {
 
         <div className="grid grid-cols-2 gap-4">
           <SetBudgetCard />
-          <WeeklyBudgetAnalysis
-            title="Weekly Spend Analysis"
-            bgColor="bg-orange-500"
-          />
-          <WeeklyBudgetAnalysis
-            title="Monthly Spend Analysis"
-            bgColor="bg-green-500"
-          />
-          <WeeklyBudgetAnalysis
-            title="Yearly Spend Analysis"
-            bgColor="bg-purple-500"
-          />
-          <WeeklyBudgetAnalysis
-            title="Total Spend Analysis"
-            bgColor="bg-rose-500"
-          />
+          <WeeklyBudgetAnalysis title="Weekly Spend Analysis" />
+          <WeeklyBudgetAnalysis title="Monthly Spend Analysis" />
+          <WeeklyBudgetAnalysis title="Yearly Spend Analysis" />
+          <WeeklyBudgetAnalysis title="Total Spend Analysis" />
         </div>
       </div>
 

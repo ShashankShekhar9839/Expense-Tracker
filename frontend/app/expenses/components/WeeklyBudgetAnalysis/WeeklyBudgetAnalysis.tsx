@@ -3,16 +3,14 @@
 interface WeeklyBudgetAnalysisProps {
   title?: string;
   onClick?: () => void;
-  bgColor?: string;
 }
 
-function WeeklyBudgetAnalysis({
-  title,
-  onClick,
-  bgColor,
-}: WeeklyBudgetAnalysisProps) {
+function WeeklyBudgetAnalysis({ title, onClick }: WeeklyBudgetAnalysisProps) {
   return (
-    <div className={`p-4 rounded-lg shadow-md ${bgColor}`}>
+    <div
+      className={`p-4 rounded-lg shadow-md border-gray-500 border-1 cursor-pointer`}
+      onClick={onClick}
+    >
       <h2 className="text-lg font-semibold mb-4">{title}</h2>
     </div>
   );
