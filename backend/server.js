@@ -12,6 +12,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ✅ Add this test route
+app.get("/", (req, res) => {
+  res.send("🚀 Expense Tracker API is running...");
+});
+
 // Routes
 app.use("/api/auth", authRoutes);
 
